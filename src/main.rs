@@ -1,7 +1,7 @@
 fn longest_common_subsequence(word1: &Vec<char>, word2: &Vec<char>) -> Vec<Vec<i32>> {
     let word1_size: usize = word1.len();
     let word2_size: usize = word2.len();
-    let mut dp = vec![vec![0; word2_size + 1]; word1_size + 1];
+    let mut dp: Vec<Vec<i32>> = vec![vec![0; word2_size + 1]; word1_size + 1];
     for idx1 in (0..word1_size).rev() {
         for idx2 in (0..word2_size).rev() {
             if word1[idx1] == word2[idx2] {
